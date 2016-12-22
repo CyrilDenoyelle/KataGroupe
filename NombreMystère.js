@@ -1,7 +1,12 @@
-var numRand = Math.floor(Math.random() * 10);
-var numUser = prompt("entrer un chiffre positif");
+var min = prompt("min");
+var max = prompt("max");
 
-for(i = 0; i < 5; i++){
+var numRand = Math.floor(Math.random() * (max - min)) + min;
+
+var nbTentative = prompt("combien d'essais ?");
+
+var numUser = prompt("entrer un chiffre positif");
+for(i = 0; i < nbTentative-1; i++){
 
   if(numRand > numUser){
     var numUser = prompt("c'est plus")
